@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding:0;
+  background-color: #f0f0f0;
+  background-image: url('../images/bg1.png');
+  font-family: 'Press Start 2P', cursive; 
+  font-size:medium;
+}
+button {
+    text-align: center;
+	display: inline-block;
+	margin:5px;
+    font-weight: bold;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+
+}
+button:active {
+	box-shadow: none;
+	position: relative;
+	top: .2em;
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+
+/* Base styles */
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header styles */
+.app-header {
+  /* background-color: #4CAF50; */
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Navigation styles */
+.app-nav {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+/* Main content area */
+.app-main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Counter view */
+.counter-view {
+  text-align: center;
+  margin:0;
+   width:89vw; 
+   max-width:400px;
+   height: 100%;
+}
+
+.container {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Counter component */
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 69vh;
+  position: relative;
+  z-index: 1;
+  margin-top:0;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 33%;
+  position: relative;
+}
+
+.minus-button, .plus-button {
+  font-size: 24px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ff4444;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  z-index: 2;
+  margin-bottom:10px;
+}
+
+.minus-button:hover, .plus-button:hover {
+  background-color: #ff6666;
+}
+
+.image-container {
+  flex-grow: 1;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.scrolling-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../images/road1.png');
+  background-repeat: repeat-y;
+  animation: scrollBackground 10s linear infinite;
+}
+
+.scrolling-background::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  background-image: url('../images/road1.png');
+  background-repeat: repeat-y;
+}
+
+@keyframes scrollBackground {
+  from { transform: translateY(0); }
+  to { transform: translateY(-50%); }
+}
+.category-image {
+  position: absolute;
+  bottom: 15px;
+  left: 30%;
+  transform: translateX(-50%);
+  max-width: 40px;
+  max-height: 5rem;
+  transition: transform 0.3s ease-out;
+  z-index: 1;
+}
+
+.counter button{
+  color: #fff;
+  background-color: #ff1a1a; /* Bright red background */
+  font-family: 'Press Start 2P', cursive; /* Use a retro, pixelated font */
+  font-size: 14px;
+  text-transform: uppercase;
+  text-align: center;
+  /* padding: 10px 20px; */
+  display: inline-block;
+  border: 4px solid #b30000; /* Darker red border */
+  border-radius: 4px;
+  box-shadow: 0 5px #990000, 0 8px 0 0 #e60000; /* Shadow for 3D effect */
+  cursor: pointer;
+  outline: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-shadow: 1px 1px 0 #990000;
+}
+
+.counter button:active {
+  transform: translateY(3px); /* Pressed effect */
+  box-shadow: 0 2px #990000, 0 4px 0 0 #e60000;
+}
+
+.counter button:hover {
+  background-color: #e60000; /* Slightly darker on hover */
+}
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top:40%;
+  text-align: center;
+}
+
+@media (min-width:420px) {
+  .landing-page{
+    margin-top: 10%;
+  }
+  button{
+    font-size: 1.2rem;
+    padding: 0.6rem 1rem;
+  }
+}
+
+.start-button:hover {
+  background-color: #45a049;
+}
+
+
+.counter span {
+  font-size: 1.5rem;
+  margin: 0 1rem;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .app-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .app-nav button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .counter button {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .counter span {
+    font-size: 1.2rem;
+  }
+
+  .calendar-view {
+    padding: 0.5rem;
+  }
+
+  .calendar-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .calendar-header button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .calendar-day {
+    min-height: 60px;
+    padding: 0.25rem;
+  }
+
+  .day-number {
+    font-size: 0.9rem;
+  }
+
+  .day-content {
+    font-size: 0.8rem;
+  }
+}

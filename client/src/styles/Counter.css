@@ -1,0 +1,28 @@
+
+ .road{
+        position: absolute;
+        top: 100%; 
+        width: 100%;
+        height: 100%; 
+        background-image: url(https://opengameart.org/sites/default/files/background-1_0.png);
+    background-image: url(https://opengameart.org/sites/default/files/background-1_0.png);
+    background-repeat: no-repeat;
+    background-size: 103%;
+    background-position-y: 27px;
+    animation: loopingRoad 250s linear infinite;
+    height: 100%;
+    width: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+ }
+
+ @keyframes loopingRoad {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 -100000px;
+    }
+}
