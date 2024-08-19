@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:4000/api';
+const API_URL = 'https://right-game.onrender.com/api';
 
 export const fetchDailyCount = async () => {
     const response = await fetch(`${API_URL}/daily-count`);
